@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
+import org.hibernate.annotations.Proxy;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -17,10 +18,11 @@ import java.io.Serializable;
  **/
 @Data
 @Entity
-@Table(name = "payment")
 @AllArgsConstructor
 @NoArgsConstructor
 @Accessors(chain = true)
+@Proxy(lazy = false)//解决LazyInitializationException问题
+@Table(name = "payment")
 public class Payment implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
