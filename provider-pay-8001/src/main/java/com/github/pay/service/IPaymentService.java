@@ -1,5 +1,7 @@
 package com.github.pay.service;
 
+import com.github.pay.entities.Payment;
+
 /**
  * @className: IPaymentService
  * @description: 支付业务处理
@@ -8,4 +10,8 @@ package com.github.pay.service;
  * @create: 2020-09-03 23:47
  **/
 public interface IPaymentService {
+
+    Payment getPaymentById(Long id);
+
+    Payment createPayment(Payment payment);
 }

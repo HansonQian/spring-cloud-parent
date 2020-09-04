@@ -1,5 +1,6 @@
 package com.github.pay.service.impl;
 
+import com.github.pay.entities.Payment;
 import com.github.pay.repository.PaymentRepository;
 import com.github.pay.service.IPaymentService;
 import org.springframework.stereotype.Service;
@@ -22,4 +23,17 @@ public class PaymentService implements IPaymentService {
     public PaymentService(PaymentRepository paymentRepository) {
         this.paymentRepository = paymentRepository;
     }
+
+
+    @Override
+    public Payment getPaymentById(Long id) {
+        return paymentRepository.getOne(id);
+    }
+
+    @Override
+    public Payment createPayment(Payment payment) {
+        return paymentRepository.save(payment);
+    }
+
+
 }

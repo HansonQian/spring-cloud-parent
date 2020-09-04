@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 /**
  * @className: Payment
@@ -20,7 +21,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Accessors(chain = true)
-public class Payment {
+public class Payment implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
