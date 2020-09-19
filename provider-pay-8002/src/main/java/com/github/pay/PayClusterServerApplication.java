@@ -8,7 +8,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 /**
- * @className: PayServerApplication
+ * @className: PayClusterServerApplication
  * @description: 支付服务
  * @author: Hanson
  * @version: V1.0
@@ -19,8 +19,8 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableDiscoveryClient
 @EnableTransactionManagement
 @EntityScan("com.github.entities")
-public class PayServerApplication {
+public class PayClusterServerApplication {
     public static void main(String[] args) {
-        SpringApplication.run(PayServerApplication.class, args);
+        SpringApplication.run(PayClusterServerApplication.class, args);
     }
 }

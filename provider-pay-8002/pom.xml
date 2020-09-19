@@ -9,9 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>provider-pay-8001</artifactId>
-
-
+    <artifactId>provider-pay-8002</artifactId>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -80,5 +78,6 @@
         </dependency>
 
     </dependencies>
+
 
 </project>

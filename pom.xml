@@ -10,6 +10,12 @@
     <version>1.0.0</version>
     <modules>
         <module>provider-pay-8001</module>
+        <module>consumer-order-80</module>
+        <module>common-model</module>
+        <module>common-utils</module>
+        <module>eureka-server-7001</module>
+        <module>eureka-server-7002</module>
+        <module>provider-pay-8002</module>
     </modules>
 
 
@@ -24,10 +30,11 @@
         <log4j.version>1.2.17</log4j.version>
         <mysql.version>5.1.47</mysql.version>
         <druid.version>1.1.10</druid.version>
+        <mybatis.spring.boot.version>2.1.3</mybatis.spring.boot.version>
+        <swagger-spring-boot.version>1.9.1.RELEASE</swagger-spring-boot.version>
         <spring.boot.version>2.2.2.RELEASE</spring.boot.version>
         <spring.cloud.version>Hoxton.SR1</spring.cloud.version>
         <spring.cloud.alibaba.version>2.1.0.RELEASE</spring.cloud.alibaba.version>
-        <mybatis.spring.boot.version>2.1.3</mybatis.spring.boot.version>
     </properties>
 
     <!--依赖管理-->
@@ -76,8 +83,27 @@
                 <version>${mybatis.spring.boot.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>com.spring4all</groupId>
+                <artifactId>swagger-spring-boot-starter</artifactId>
+                <version>${swagger-spring-boot.version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <fork>true</fork>
+                    <addResources>true</addResources>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 
 </project>

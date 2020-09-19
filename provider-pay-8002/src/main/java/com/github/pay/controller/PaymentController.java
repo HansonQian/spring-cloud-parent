@@ -1,4 +1,4 @@
-package com.github.pay.web.controller;
+package com.github.pay.controller;
 
 import com.github.entities.Payment;
 import com.github.pay.service.IPaymentService;
@@ -52,9 +52,9 @@ public class PaymentController {
     public CommonResult<Payment> getPaymentById(@PathVariable("id") long id) {
         Payment data = paymentService.getPaymentById(id);
         if (null == data) {
-            return new CommonResult<>(200, "根据：" + id + " 未找到支付实体信息!来自:"+port);
+            return new CommonResult<>(200, "根据：" + id + " 未找到支付实体信息! 来自:" + port);
         } else {
-            return new CommonResult<>(200, "获取成功,来自:"+port, data);
+            return new CommonResult<>(200, "获取成功! 来自:" + port, data);
         }
 
     }

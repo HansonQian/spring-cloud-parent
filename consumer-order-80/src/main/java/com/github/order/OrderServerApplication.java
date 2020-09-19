@@ -1,26 +1,24 @@
-package com.github.pay;
+package com.github.order;
 
 import com.spring4all.swagger.EnableSwagger2Doc;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 /**
- * @className: PayServerApplication
- * @description: 支付服务
+ * @className: OrderServerApplication
+ * @description: 订单服务
  * @author: Hanson
  * @version: V1.0
- * @create: 2020-09-03 22:26
+ * @create: 2020-09-05 01:34
  **/
 @EnableSwagger2Doc
-@SpringBootApplication
 @EnableDiscoveryClient
+@SpringBootApplication
 @EnableTransactionManagement
-@EntityScan("com.github.entities")
-public class PayServerApplication {
+public class OrderServerApplication {
     public static void main(String[] args) {
-        SpringApplication.run(PayServerApplication.class, args);
+        SpringApplication.run(OrderServerApplication.class,args);
     }
 }

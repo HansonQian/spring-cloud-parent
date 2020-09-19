@@ -1,4 +1,4 @@
-package com.github.pay.entities;
+package com.github.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

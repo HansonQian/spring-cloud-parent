@@ -1,0 +1,20 @@
+server:
+  port: 80
+spring:
+  application:
+    name: order-service
+eureka:
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${spring.application.instance_id:${server.port}}
+  client:
+    service-url:
+      defaultZone: http://${eureka.host:127.0.0.1}:${eureka.port:7002}/eureka/
+
+swagger:
+  enabled: true
+  title: order-service
+  description: 订单模块服务
+  base-package: com.github.order.web.controller
+  version: 1.0.0
